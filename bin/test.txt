@@ -1,0 +1,16 @@
+// define que comienza un programa
+
+programa area{
+
+  // ingresa a una funcion
+	
+  funcion principal(){
+    entero a = 10;
+    entero b = (5-5);
+    cadena d = "";
+    booleano b = true;
+    
+    imprime a + d;
+  }
+  
+}

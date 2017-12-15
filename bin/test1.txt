@@ -1,0 +1,73 @@
+clase Hola{
+
+	cadena a = 10 // declaro variables globales
+	cadena b // declara variable global sin asignar
+	
+	func hola(entero b, cadena a){		
+		cadena a = 10
+		entero a = 20
+	
+		booleano d = true
+		//imprime a
+		si(a<b){			
+			entero c = "a" // declaro una variable a un tipo diferente
+			mientras(a>b){
+				si(a!=b){
+					// hola a todos
+					imprime b
+					retorna b
+					 // retorna algo no definido
+					mientras(a>b){
+						si(a!=b){
+							// Imprime una variable no definida	
+							imprime c						 
+							retorna a
+							// retorna algo 
+						} sino {
+							imprime d
+							// comenta dentro de un sino
+							si(a!=b){
+							// Imprime una variable no definida	
+							imprime c						 
+							retorna a
+							// retorna algo 
+							} sino {
+								imprime d
+								// comenta dentro de un sino
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	imprime d // imprime algo fuera de su contexto
+	
+	hola123() // llama algo que no existe
+	
+	func hola(){		
+		cadena a = 10
+		entero a = 20
+		//imprime a
+		si(a<b){			
+			entero b = "a" // declaro una variable a un tipo diferente
+			mientras(a>b){
+				si(a==b){
+					// hola a todos
+					imprime b
+					retorna b
+					 // retorna algo no definido
+					mientras(a>b){
+						si(a!=b){
+							// Imprime una variable no definida	
+							imprime c						 
+							retorna a
+							// retorna algo 
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+<project name="examples" default="PESP" basedir=".">
+
+  <property name="javacc.home" value="C:\Users\user\eclipse-workspace\demo\lib"/>
+
+  <target name="PESP" description="Builds example 'eg1'">
+    <delete dir="PESP"/>
+    <mkdir dir="PESP"/> 
+    <copy file="PESP.jjt" todir="PESP"/>
+    <jjtree target="PESP.jjt" outputdirectory="PESP" javacchome="${javacc.home}"/>
+    <javacc target="PESP/PESP.jj" outputdirectory="PESP" javacchome="${javacc.home}"/>
+    <javac deprecation="false" srcdir="PESP" destdir="PESP" includeantruntime='false'/>
+    <echo message="*******"/>
+    <echo message="******* Now cd into the eg1 directory and run 'java PESP' ******"/>
+    <echo message="*******"/>
+  </target>
+
+  <target name="all" description="Builds all examples" depends="clean,PESP">
+    <echo message="*******"/>
+    <echo message="******* All Built ******"/>
+    <echo message="*******"/>
+  </target>
+    
+  <target name="clean" description="Cleans up any example directories">
+    <delete dir="PESP"/>
+  </target>
+    
+
+</project>
